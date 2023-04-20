@@ -44,7 +44,7 @@ This issue occurs because of one of the following reasons:
 
 ## Implicit credentials can't be used
 
-To resolve this issue, set the `TrustedHosts` value as follows:
+To resolve this issue, on the client machine set the `TrustedHosts` value as follows:
 
 |Value  |Description  |
 |---------|---------|
@@ -73,7 +73,7 @@ For example, you can use one of the following ways to set the `TrustedHosts` val
 
 ## Default SPN prefix HTTP prevents Azure AD authentication
 
-To resolve this issue, set the default SPN prefix to `HOST` by running the following command:
+To resolve this issue, on the client machine set the default SPN prefix to `HOST` by running the following command:
 
 ```console
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
